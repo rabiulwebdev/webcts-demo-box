@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flash Event | Balloon & Event Decoration in Noida — Birthday, Wedding, Corporate Decor</title>
+<meta name="description" content="Flash Event — Noida's trusted event decoration studio. Birthday parties, naming ceremonies, baby showers, weddings, corporate events, balloon & flower decoration in Sector 70, Noida. Call 099992 80505.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#d4a017; --gold-light:#f0c75e; --pink:#e84393; --dark:#1a1225;
+  --purple:#6c2bd9; --ink:#2b2438; --muted:#6f6880; --bg-soft:#faf7f2; --white:#ffffff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;color:var(--ink);background:var(--white);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;line-height:1.25}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin:0 auto}
+
+/* ---------- Top bar ---------- */
+.topbar{background:var(--dark);color:#e8e2f2;font-size:13px;padding:8px 0}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.topbar a{color:var(--gold-light)}
+.topbar .tb-right{display:flex;gap:20px;flex-wrap:wrap}
+
+/* ---------- Navbar ---------- */
+header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);box-shadow:0 2px 18px rgba(30,10,60,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--purple) 55%,var(--gold));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-family:'Playfair Display',serif;font-size:22px;box-shadow:0 4px 14px rgba(232,67,147,.4)}
+.logo-text{font-family:'Playfair Display',serif;font-size:22px;font-weight:800;color:var(--dark)}
+.logo-text span{color:var(--pink)}
+.nav-links{display:flex;gap:28px;align-items:center;list-style:none}
+.nav-links a{font-size:15px;font-weight:500;color:var(--ink);position:relative;padding:4px 0}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:-2px;width:0;height:2px;background:linear-gradient(90deg,var(--pink),var(--gold));transition:width .3s}
+.nav-links a:hover::after{width:100%}
+.btn{display:inline-block;padding:11px 26px;border-radius:40px;font-weight:600;font-size:15px;transition:.3s;cursor:pointer;border:none}
+.btn-primary{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;box-shadow:0 6px 18px rgba(232,67,147,.35)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(232,67,147,.45)}
+.btn-outline{border:2px solid var(--gold);color:var(--dark);background:transparent}
+.btn-outline:hover{background:var(--gold);color:#fff}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+.hamburger span{width:26px;height:3px;background:var(--dark);border-radius:2px;transition:.3s}
+
+/* ---------- Hero slider ---------- */
+.hero{position:relative;height:88vh;min-height:560px;overflow:hidden}
+.slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.2s ease;animation:kenburns 8s ease forwards}
+.slide.active{opacity:1}
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.08)}}
+.slide::before{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(20,8,40,.82) 20%,rgba(60,15,90,.45) 60%,rgba(20,8,40,.55))}
+.hero-content{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center}
+.hero-badge{display:inline-block;background:rgba(212,160,23,.18);border:1px solid var(--gold);color:var(--gold-light);padding:6px 18px;border-radius:30px;font-size:13px;letter-spacing:2px;text-transform:uppercase;width:fit-content;margin-bottom:20px}
+.hero h1{color:#fff;font-size:clamp(34px,5.4vw,64px);font-weight:800;max-width:760px}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--gold-light),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:#d9d2e8;font-size:17px;max-width:620px;margin:18px 0 32px}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.hero-nav{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:3}
+.dot{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,.4);cursor:pointer;transition:.3s;border:none}
+.dot.active{background:var(--gold);transform:scale(1.25)}
+
+/* ---------- Sections ---------- */
+section{padding:90px 0}
+.sec-tag{color:var(--pink);font-weight:600;letter-spacing:3px;text-transform:uppercase;font-size:13px;text-align:center}
+.sec-title{text-align:center;font-size:clamp(28px,3.6vw,42px);color:var(--dark);margin:8px 0 14px}
+.sec-sub{text-align:center;color:var(--muted);max-width:680px;margin:0 auto 54px}
+
+/* About */
+.about-wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:60px;align-items:center}
+.about-imgs{position:relative}
+.about-imgs .main{border-radius:20px;box-shadow:0 24px 60px rgba(40,15,80,.25)}
+.about-imgs .float{position:absolute;bottom:-34px;right:-20px;width:46%;border-radius:16px;border:6px solid #fff;box-shadow:0 16px 44px rgba(40,15,80,.3)}
+.exp-badge{position:absolute;top:-22px;left:-18px;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;padding:18px 22px;border-radius:16px;text-align:center;box-shadow:0 12px 30px rgba(232,67,147,.4)}
+.exp-badge b{font-size:30px;font-family:'Playfair Display',serif;display:block;line-height:1}
+.about-text h2{font-size:clamp(26px,3vw,36px);color:var(--dark);margin-bottom:18px}
+.about-text p{color:var(--muted);margin-bottom:14px}
+.about-list{list-style:none;margin:22px 0 30px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.about-list li{padding-left:28px;position:relative;font-weight:500;font-size:15px}
+.about-list li::before{content:'✦';position:absolute;left:0;color:var(--gold)}
+
+/* Stats */
+.stats{background:linear-gradient(120deg,#241238,#4b1a6b 60%,#7a1f5c);color:#fff}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.stat b{font-size:clamp(34px,4vw,52px);font-family:'Playfair Display',serif;color:var(--gold-light);display:block}
+.stat span{font-size:14px;letter-spacing:1px;color:#d9cfe8}
+
+/* Services */
+.services{background:var(--bg-soft)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.svc{background:#fff;border-radius:18px;padding:34px 28px;box-shadow:0 8px 30px rgba(40,15,80,.08);transition:.35s;position:relative;overflow:hidden}
+.svc::before{content:'';position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--pink),var(--gold));transform:scaleX(0);transform-origin:left;transition:.35s}
+.svc:hover{transform:translateY(-8px);box-shadow:0 20px 44px rgba(40,15,80,.15)}
+.svc:hover::before{transform:scaleX(1)}
+.svc-icon{width:62px;height:62px;border-radius:14px;background:linear-gradient(135deg,rgba(232,67,147,.12),rgba(108,43,217,.12));display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:18px}
+.svc h3{font-size:20px;margin-bottom:10px;color:var(--dark)}
+.svc p{color:var(--muted);font-size:14.5px}
+
+/* Gallery */
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gal-item{position:relative;border-radius:16px;overflow:hidden;cursor:pointer;aspect-ratio:4/3.4}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.gal-item:hover img{transform:scale(1.08)}
+.gal-item .cap{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,8,40,.85),transparent 55%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;opacity:0;transition:.35s}
+.gal-item:hover .cap{opacity:1}
+.gal-item .cap b{color:#fff;font-size:17px;font-family:'Playfair Display',serif}
+.gal-item .cap span{color:var(--gold-light);font-size:12.5px;letter-spacing:1.5px;text-transform:uppercase}
+.lightbox{position:fixed;inset:0;background:rgba(12,5,24,.94);z-index:2000;display:none;align-items:center;justify-content:center;flex-direction:column;padding:24px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:min(92vw,900px);max-height:80vh;border-radius:12px}
+.lightbox .lb-cap{color:#fff;margin-top:14px;font-size:15px}
+.lightbox .lb-close{position:absolute;top:22px;right:28px;background:none;border:none;color:#fff;font-size:36px;cursor:pointer}
+.lightbox .lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.12);border:none;color:#fff;font-size:30px;width:52px;height:52px;border-radius:50%;cursor:pointer}
+.lightbox .lb-prev{left:22px}.lightbox .lb-next{right:22px}
+
+/* Why us */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why{background:#fff;border:1px solid #efe8f6;border-radius:16px;padding:30px 24px;text-align:center;transition:.3s}
+.why:hover{border-color:var(--gold);box-shadow:0 14px 34px rgba(212,160,23,.15)}
+.why b{font-size:40px;display:block;margin-bottom:8px}
+.why h4{font-size:17px;margin-bottom:8px;color:var(--dark)}
+.why p{font-size:13.5px;color:var(--muted)}
+
+/* Testimonials */
+.testi{background:var(--bg-soft)}
+.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.t-card{background:#fff;border-radius:18px;padding:32px;box-shadow:0 8px 28px rgba(40,15,80,.07)}
+.t-card .stars{color:var(--gold);letter-spacing:3px;margin-bottom:14px}
+.t-card p{color:var(--muted);font-size:14.5px;font-style:italic;margin-bottom:18px}
+.t-card .who b{display:block;color:var(--dark)}
+.t-card .who span{font-size:13px;color:var(--pink);font-weight:500}
+
+/* Contact */
+.contact-wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:50px}
+.c-card{background:linear-gradient(140deg,#241238,#5b1d72);border-radius:22px;padding:44px 38px;color:#fff}
+.c-card h3{font-size:26px;margin-bottom:22px}
+.c-line{display:flex;gap:16px;margin-bottom:22px;align-items:flex-start}
+.c-line .ic{width:44px;height:44px;min-width:44px;border-radius:12px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:19px}
+.c-line b{display:block;font-size:14px;color:var(--gold-light);letter-spacing:1px;text-transform:uppercase;margin-bottom:2px}
+.c-line p{font-size:14.5px;color:#e4ddf2}
+.c-card .btn{margin-top:6px}
+form{background:#fff;border-radius:22px;padding:40px;box-shadow:0 14px 44px rgba(40,15,80,.1)}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.f-group{margin-bottom:16px}
+.f-group label{font-size:13px;font-weight:600;color:var(--dark);display:block;margin-bottom:6px}
+.f-group input,.f-group select,.f-group textarea{width:100%;padding:12px 15px;border:1.5px solid #e6dff0;border-radius:10px;font-family:inherit;font-size:14.5px;transition:.25s;background:#fbf9fd}
+.f-group input:focus,.f-group select:focus,.f-group textarea:focus{outline:none;border-color:var(--pink);box-shadow:0 0 0 3px rgba(232,67,147,.12)}
+.map{margin-top:56px;border-radius:20px;overflow:hidden;box-shadow:0 14px 44px rgba(40,15,80,.12)}
+.map iframe{width:100%;height:380px;border:0;display:block}
+
+/* Footer */
+footer{background:var(--dark);color:#c9c0da;padding:70px 0 0}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:50px}
+footer h4{color:#fff;font-size:19px;margin-bottom:18px}
+footer p,footer li{font-size:14px;line-height:1.9}
+footer ul{list-style:none}
+footer ul a:hover{color:var(--gold-light)}
+.f-bottom{border-top:1px solid rgba(255,255,255,.1);padding:20px 0;text-align:center;font-size:13px;color:#8d84a3}
+
+/* WhatsApp float */
+.wa-float{position:fixed;bottom:24px;right:24px;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,.5);z-index:1500;transition:.3s}
+.wa-float:hover{transform:scale(1.1)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+
+/* Reveal animation */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* Responsive */
+@media(max-width:960px){
+  .svc-grid,.gal-grid,.t-grid{grid-template-columns:repeat(2,1fr)}
+  .stats-grid,.why-grid{grid-template-columns:repeat(2,1fr)}
+  .about-wrap,.contact-wrap{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .nav-links{position:fixed;inset:0 0 0 auto;width:min(78vw,320px);background:#fff;flex-direction:column;padding:90px 34px;gap:26px;transform:translateX(100%);transition:.35s;box-shadow:-8px 0 40px rgba(0,0,0,.15)}
+  .nav-links.open{transform:none}
+  .hamburger{display:flex;z-index:1100}
+  .svc-grid,.gal-grid,.t-grid,.f-grid{grid-template-columns:1fr}
+  .about-list{grid-template-columns:1fr}
+  section{padding:64px 0}
+  .topbar .tb-left{display:none}
+  .hero{height:78vh}
+}
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="container">
+    <div class="tb-left">📍 Flat no 334–335, Saidham Residency, Sector 70, Noida, UP 201316</div>
+    <div class="tb-right">
+      <a href="tel:+919999280505">📞 099992 80505</a>
+      <a href="https://wa.me/919999280505" target="_blank" rel="noopener">WhatsApp Us</a>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<header>
+  <div class="container nav">
+    <a href="#home" class="logo">
+      <div class="logo-mark">F</div>
+      <div class="logo-text">Flash <span>Event</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+    <div style="display:flex;gap:12px;align-items:center">
+      <a href="tel:+919999280505" class="btn btn-primary" style="padding:10px 22px">📞 099992 80505</a>
+      <button class="hamburger" id="hamBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home" style="padding:0">
+  <div class="slide active" style="background-image:url('assets/gallery-3.jpg')"></div>
+  <div class="slide" style="background-image:url('assets/gallery-1.jpg')"></div>
+  <div class="slide" style="background-image:url('assets/gallery-5.jpg')"></div>
+  <div class="slide" style="background-image:url('assets/gallery-6.jpg')"></div>
+  <div class="container hero-content">
+    <span class="hero-badge">Noida's Trusted Decor Studio</span>
+    <h1>We Turn Your Moments Into <em>Unforgettable Celebrations</em></h1>
+    <p>Birthdays, naming ceremonies, baby showers, weddings & corporate events — premium balloon artistry, flower décor and themed backdrops crafted with love at venues across Noida & Delhi NCR.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn btn-primary">Book Your Decoration ✦</a>
+      <a href="#gallery" class="btn btn-outline" style="color:#fff;border-color:#fff">View Our Work</a>
+    </div>
+  </div>
+  <div class="hero-nav">
+    <button class="dot active" data-i="0"></button>
+    <button class="dot" data-i="1"></button>
+    <button class="dot" data-i="2"></button>
+    <button class="dot" data-i="3"></button>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about">
+  <div class="container about-wrap">
+    <div class="about-imgs reveal">
+      <div class="exp-badge"><b>500+</b>Events<br>Decorated</div>
+      <img class="main" src="assets/gallery-3.jpg" alt="Flash Event birthday stage decoration">
+      <img class="float" src="assets/gallery-5.jpg" alt="Flash Event engagement floral décor">
+    </div>
+    <div class="about-text reveal">
+      <span class="sec-tag" style="text-align:left">About Us</span>
+      <h2>Welcome to Flash Event — Where Every Celebration Shines</h2>
+      <p>Flash Event is a full-service event decoration studio based in Sector 70, Noida. From intimate home gatherings to grand banquet setups, our team designs stunning balloon installations, elegant floral arrangements and custom themed backdrops that make every occasion picture-perfect.</p>
+      <p>We handle everything — concept, materials, setup and styling — so you can simply enjoy your special day.</p>
+      <ul class="about-list">
+        <li>Birthday & Theme Parties</li>
+        <li>Naming & Annaprashan Ceremonies</li>
+        <li>Baby Shower & Welcome Baby Décor</li>
+        <li>Wedding, Haldi & Mehendi Styling</li>
+        <li>Corporate & Office Events</li>
+        <li>Balloon Arches, Garlands & LED Numbers</li>
+      </ul>
+      <a href="#services" class="btn btn-primary">Explore Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="stats" style="padding:64px 0">
+  <div class="container stats-grid">
+    <div class="stat reveal"><b>500+</b><span>Events Decorated</span></div>
+    <div class="stat reveal"><b>50+</b><span>Themes & Concepts</span></div>
+    <div class="stat reveal"><b>4.9★</b><span>Client Rating</span></div>
+    <div class="stat reveal"><b>100%</b><span>On-Time Setup</span></div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services" id="services">
+  <div class="container">
+    <span class="sec-tag">What We Do</span>
+    <h2 class="sec-title">Our Decoration Services</h2>
+    <p class="sec-sub">From balloons to blossoms — complete décor solutions for every celebration, customised to your theme, venue and budget.</p>
+    <div class="svc-grid">
+      <div class="svc reveal"><div class="svc-icon">🎈</div><h3>Balloon Decoration</h3><p>Organic balloon arches, garlands, columns, ceiling drops and bouquet arrangements in chrome, pastel and metallic finishes that transform any space instantly.</p></div>
+      <div class="svc reveal"><div class="svc-icon">🌸</div><h3>Flower Decoration</h3><p>Fresh & artificial floral backdrops, stage frames, entrance arches and table styling that add timeless elegance to weddings and intimate functions.</p></div>
+      <div class="svc reveal"><div class="svc-icon">🎂</div><h3>Birthday Party Decoration</h3><p>Themed kids' birthdays with custom photo backdrops, LED name letters, character cut-outs, number lights and game-station styling for all ages.</p></div>
+      <div class="svc reveal"><div class="svc-icon">👶</div><h3>Naming & Baby Shower</h3><p>Adorable welcome-baby and naming ceremony setups with pastel palettes, foil letters, neon signs and keepsake photo corners for your little one.</p></div>
+      <div class="svc reveal"><div class="svc-icon">💍</div><h3>Wedding & Engagement</h3><p>Haldi, mehendi, engagement and wedding stage décor — floral walls, sequin shimmer panels, fairy-light canopies and premium props.</p></div>
+      <div class="svc reveal"><div class="svc-icon">🏢</div><h3>Corporate & Festival Décor</h3><p>Office openings, anniversaries, Diwali & festive décor, product launches and brand activations with polished, on-brand styling.</p></div>
+      <div class="svc reveal"><div class="svc-icon">🎪</div><h3>Theme & Prop Setup</h3><p>Full theme execution — Spider-Man to fairy gardens — with cut-outs, marquee numbers, neon signage, cake tables and entry décor.</p></div>
+      <div class="svc reveal"><div class="svc-icon">🎤</div><h3>Artist & Host Management</h3><p>Magicians, tattoo artists, game hosts, emcees and entertainers coordinated end-to-end so your event runs flawlessly.</p></div>
+      <div class="svc reveal"><div class="svc-icon">🎲</div><h3>Game & Activity Zones</h3><p>Age-appropriate game stations, craft corners and activity arrangements that keep every guest engaged and every party buzzing.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section id="gallery">
+  <div class="container">
+    <span class="sec-tag">Our Work</span>
+    <h2 class="sec-title">Recent Events by Flash Event</h2>
+    <p class="sec-sub">Real celebrations, real venues — a glimpse of the setups our team has crafted across Noida & Delhi NCR.</p>
+    <div class="gal-grid">
+      <div class="gal-item reveal" data-cap="Naming Ceremony — Pastel Balloon Arch & Neon Sign"><img src="assets/gallery-1.jpg" alt="Naming ceremony balloon arch décor"><div class="cap"><span>Naming Ceremony</span><b>Pastel Arch & Neon Sign</b></div></div>
+      <div class="gal-item reveal" data-cap="1st Birthday — Boss Baby Theme with Photo Standee"><img src="assets/gallery-2.jpg" alt="Boss Baby theme 1st birthday balloon décor"><div class="cap"><span>1st Birthday</span><b>Boss Baby Theme Setup</b></div></div>
+      <div class="gal-item reveal" data-cap="50th Birthday — LED Name Letters, Teddy Bears & Balloon Wall"><img src="assets/gallery-3.jpg" alt="50th birthday LED letters stage décor"><div class="cap"><span>50th Birthday</span><b>LED Letters & Balloon Wall</b></div></div>
+      <div class="gal-item reveal" data-cap="Spider-Man Theme Birthday — Marquee Number & Character Cut-outs"><img src="assets/gallery-4.jpg" alt="Spider-Man theme birthday decoration"><div class="cap"><span>Kids Birthday</span><b>Spider-Man Theme Décor</b></div></div>
+      <div class="gal-item reveal" data-cap="Engagement — Floral Moon Frame & Fairy Light Stage"><img src="assets/gallery-5.jpg" alt="Engagement floral moon frame décor"><div class="cap"><span>Engagement</span><b>Floral Moon Frame Setup</b></div></div>
+      <div class="gal-item reveal" data-cap="Outdoor Birthday — Black & Silver Balloon Garland with Shimmer Wall"><img src="assets/gallery-6.jpg" alt="Outdoor birthday shimmer wall and balloon décor"><div class="cap"><span>Outdoor Birthday</span><b>Shimmer Wall & Chrome Garland</b></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose">✕</button>
+  <button class="lb-nav lb-prev" id="lbPrev">‹</button>
+  <img id="lbImg" src="" alt="Gallery preview">
+  <div class="lb-cap" id="lbCap"></div>
+  <button class="lb-nav lb-next" id="lbNext">›</button>
+</div>
+
+<!-- Why us -->
+<section id="why" style="background:var(--bg-soft)">
+  <div class="container">
+    <span class="sec-tag">Why Choose Us</span>
+    <h2 class="sec-title">The Flash Event Promise</h2>
+    <p class="sec-sub">We obsess over the details so your only job is to celebrate.</p>
+    <div class="why-grid">
+      <div class="why reveal"><b>🎨</b><h4>Custom Themes</h4><p>Every décor is designed around your theme, colours and favourite characters — never copy-paste.</p></div>
+      <div class="why reveal"><b>⚡</b><h4>Same-Day Setup</h4><p>Punctual installation and strike-down teams that arrive early and finish before your guests do.</p></div>
+      <div class="why reveal"><b>💎</b><h4>Premium Materials</h4><p>High-grade balloons, fresh florals, LED signage and sturdy frames for a flawless, photo-ready finish.</p></div>
+      <div class="why reveal"><b>💰</b><h4>Budget Friendly</h4><p>Transparent packages from intimate home décor to grand banquet styling — no hidden costs.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testi">
+  <div class="container">
+    <span class="sec-tag">Happy Clients</span>
+    <h2 class="sec-title">What Families Say About Us</h2>
+    <p class="sec-sub">Hundreds of families across Noida trust Flash Event with their biggest days.</p>
+    <div class="t-grid">
+      <div class="t-card reveal"><div class="stars">★★★★★</div><p>"The Boss Baby setup for my son's first birthday was beyond expectations — the balloon work and photo standee stole the show. Guests couldn't stop clicking pictures!"</p><div class="who"><b>Priya S.</b><span>Birthday Party, Noida Sector 70</span></div></div>
+      <div class="t-card reveal"><div class="stars">★★★★★</div><p>"Flash Event decorated our engagement with the most beautiful floral moon frame. Elegant, fresh and perfectly on time. Highly recommended for any family function."</p><div class="who"><b>Rohan & Meera</b><span>Engagement, Greater Noida</span></div></div>
+      <div class="t-card reveal"><div class="stars">★★★★★</div><p>"Booked them for my husband's 50th birthday. The LED name letters and balloon wall looked premium and luxurious. Very professional team, worth every rupee."</p><div class="who"><b>Kavita M.</b><span>Anniversary Celebration, Noida</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="container">
+    <span class="sec-tag">Get In Touch</span>
+    <h2 class="sec-title">Book Your Decoration Today</h2>
+    <p class="sec-sub">Share your event details and our team will call you back with theme ideas and a customised quote.</p>
+    <div class="contact-wrap">
+      <div class="c-card reveal">
+        <h3>Contact Information</h3>
+        <div class="c-line"><div class="ic">📍</div><div><b>Address</b><p>Flat no 334–335, Saidham Residency, Sector 70 Park Rd, near Sapphire International School, Sector 70, Noida, Basi Bahuddin Nagar, Uttar Pradesh 201316</p></div></div>
+        <div class="c-line"><div class="ic">📞</div><div><b>Phone / WhatsApp</b><p><a href="tel:+919999280505" style="color:#fff">099992 80505</a></p></div></div>
+        <div class="c-line"><div class="ic">🕒</div><div><b>Working Hours</b><p>Monday – Sunday: 9:00 AM – 9:00 PM</p></div></div>
+        <div class="c-line"><div class="ic">🗺️</div><div><b>Service Area</b><p>Noida, Greater Noida, Delhi & NCR</p></div></div>
+        <a href="https://wa.me/919999280505?text=Hi%20Flash%20Event!%20I%20want%20to%20book%20a%20decoration." target="_blank" rel="noopener" class="btn" style="background:#25d366;color:#fff">💬 Chat on WhatsApp</a>
+      </div>
+      <form id="enquiryForm" class="reveal">
+        <div class="f-row">
+          <div class="f-group"><label>Your Name *</label><input type="text" id="fName" placeholder="e.g. Rahul Sharma" required></div>
+          <div class="f-group"><label>Phone Number *</label><input type="tel" id="fPhone" placeholder="e.g. 98765 43210" required></div>
+        </div>
+        <div class="f-row">
+          <div class="f-group"><label>Event Type *</label>
+            <select id="fEvent" required>
+              <option value="">Select an event…</option>
+              <option>Birthday Party</option>
+              <option>Naming Ceremony</option>
+              <option>Baby Shower / Welcome Baby</option>
+              <option>Anniversary</option>
+              <option>Engagement / Wedding</option>
+              <option>Haldi / Mehendi</option>
+              <option>Corporate / Office Event</option>
+              <option>Festival Décor</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="f-group"><label>Event Date</label><input type="date" id="fDate"></div>
+        </div>
+        <div class="f-group"><label>Venue / Location</label><input type="text" id="fVenue" placeholder="e.g. Home, Sector 70 Noida / Banquet hall name"></div>
+        <div class="f-group"><label>Tell Us About Your Theme or Requirements</label><textarea id="fMsg" rows="4" placeholder="e.g. Boss Baby theme for 1st birthday, pastel balloons, budget approx…"></textarea></div>
+        <button type="submit" class="btn btn-primary" style="width:100%">Send Enquiry on WhatsApp ✦</button>
+      </form>
+    </div>
+    <div class="map reveal">
+      <iframe title="Flash Event location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Saidham+Residency,+Sector+70,+Noida,+Uttar+Pradesh+201316&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="f-grid">
+      <div>
+        <div class="logo" style="margin-bottom:16px"><div class="logo-mark">F</div><div class="logo-text" style="color:#fff">Flash <span>Event</span></div></div>
+        <p>Noida's creative event decoration studio crafting balloon artistry, floral designs and themed celebrations for birthdays, weddings, baby showers and corporate events.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Popular Services</h4>
+        <ul>
+          <li><a href="#services">Birthday Decoration</a></li>
+          <li><a href="#services">Naming Ceremony</a></li>
+          <li><a href="#services">Baby Shower Décor</a></li>
+          <li><a href="#services">Wedding & Haldi</a></li>
+          <li><a href="#services">Corporate Events</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Us</h4>
+        <p>📍 Flat no 334–335, Saidham Residency, Sector 70 Park Rd, near Sapphire International School, Noida, UP 201316</p>
+        <p style="margin-top:10px">📞 <a href="tel:+919999280505">099992 80505</a></p>
+        <p style="margin-top:6px">🕒 Mon–Sun: 9 AM – 9 PM</p>
+      </div>
+    </div>
+    <div class="f-bottom">© 2026 Flash Event. All rights reserved. Crafted with ✦ in Noida.</div>
+  </div>
+</footer>
+
+<!-- WhatsApp float -->
+<a class="wa-float" href="https://wa.me/919999280505?text=Hi%20Flash%20Event!%20I%20want%20to%20book%20a%20decoration." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 .8C7.6.8.8 7.6.8 16c0 2.7.7 5.3 2 7.6L.8 31.2l7.8-2c2.2 1.2 4.7 1.9 7.4 1.9 8.4 0 15.2-6.8 15.2-15.2S24.4.8 16 .8zm0 27.7c-2.4 0-4.6-.7-6.6-1.8l-.5-.3-4.6 1.2 1.2-4.5-.3-.5c-1.3-2-2-4.4-2-6.9C3.2 9 9 3.2 16 3.2S28.8 9 28.8 16 23 28.5 16 28.5zm7-9.5c-.4-.2-2.3-1.1-2.6-1.2-.3-.1-.6-.2-.8.2-.2.4-.9 1.2-1.1 1.4-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3.1-1.9-1.1-1-1.9-2.3-2.1-2.6-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.7.2-.2.3-.4.4-.7.1-.3.1-.5 0-.7-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.7.1-1 .5-.3.4-1.3 1.3-1.3 3.2s1.3 3.7 1.5 4c.2.3 2.6 4 6.3 5.6.9.4 1.6.6 2.1.8.9.3 1.7.2 2.3.1.7-.1 2.3-.9 2.6-1.8.3-.9.3-1.7.2-1.8-.1-.2-.4-.3-.8-.4z"/></svg>
+</a>
+
+<script>
+// Mobile menu
+const ham = document.getElementById('hamBtn');
+const navLinks = document.getElementById('navLinks');
+ham.addEventListener('click', () => navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+// Hero slider
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+let cur = 0, timer;
+function goSlide(i){
+  slides[cur].classList.remove('active'); dots[cur].classList.remove('active');
+  cur = (i + slides.length) % slides.length;
+  slides[cur].classList.add('active'); dots[cur].classList.add('active');
+}
+function auto(){ timer = setInterval(() => goSlide(cur + 1), 5000); }
+dots.forEach(d => d.addEventListener('click', () => { clearInterval(timer); goSlide(+d.dataset.i); auto(); }));
+auto();
+
+// Lightbox
+const items = document.querySelectorAll('.gal-item');
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+const lbCap = document.getElementById('lbCap');
+let lbIdx = 0;
+function openLB(i){
+  lbIdx = i;
+  lbImg.src = items[i].querySelector('img').src;
+  lbCap.textContent = items[i].dataset.cap;
+  lb.classList.add('open');
+}
+items.forEach((it, i) => it.addEventListener('click', () => openLB(i)));
+document.getElementById('lbClose').addEventListener('click', () => lb.classList.remove('open'));
+document.getElementById('lbPrev').addEventListener('click', () => openLB((lbIdx - 1 + items.length) % items.length));
+document.getElementById('lbNext').addEventListener('click', () => openLB((lbIdx + 1) % items.length));
+lb.addEventListener('click', e => { if(e.target === lb) lb.classList.remove('open'); });
+document.addEventListener('keydown', e => {
+  if(!lb.classList.contains('open')) return;
+  if(e.key === 'Escape') lb.classList.remove('open');
+  if(e.key === 'ArrowLeft') document.getElementById('lbPrev').click();
+  if(e.key === 'ArrowRight') document.getElementById('lbNext').click();
+});
+
+// Scroll reveal
+const io = new IntersectionObserver(entries => {
+  entries.forEach(en => { if(en.isIntersecting){ en.target.classList.add('visible'); io.unobserve(en.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// Enquiry form -> WhatsApp
+document.getElementById('enquiryForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const name = document.getElementById('fName').value.trim();
+  const phone = document.getElementById('fPhone').value.trim();
+  const event = document.getElementById('fEvent').value;
+  const date = document.getElementById('fDate').value;
+  const venue = document.getElementById('fVenue').value.trim();
+  const msg = document.getElementById('fMsg').value.trim();
+  let text = `Hi Flash Event! I would like to book a decoration.\n\n👤 Name: ${name}\n📞 Phone: ${phone}\n🎉 Event: ${event}`;
+  if(date) text += `\n📅 Date: ${date}`;
+  if(venue) text += `\n📍 Venue: ${venue}`;
+  if(msg) text += `\n📝 Details: ${msg}`;
+  window.open('https://wa.me/919999280505?text=' + encodeURIComponent(text), '_blank');
+});
+</script>
+</body>
+</html>
