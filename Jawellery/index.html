@@ -1,0 +1,2157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandal Jawellery — Fine Gold & Diamond Jewellery</title>
+    <meta name="description"
+        content="Mandal Jawellery — handcrafted 22K gold, certified diamond and bridal jewellery since 1998. BIS hallmarked, lifetime exchange.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%230f0c09' stroke='%23d4af37' stroke-width='4'/><text x='50' y='66' font-size='52' text-anchor='middle' fill='%23d4af37' font-family='Georgia'>M</text></svg>">
+    <style>
+        :root {
+            --bg: #0f0c09;
+            --bg2: #16110c;
+            --panel: #1b1510;
+            --line: rgba(212, 175, 55, .18);
+            --gold: #d4af37;
+            --gold2: #f3e3a8;
+            --gold-deep: #9a7b22;
+            --ink: #f2ead9;
+            --mut: #b7ab93;
+            --serif: 'Playfair Display', Georgia, serif;
+            --sans: 'Jost', system-ui, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--ink);
+            font-family: var(--sans);
+            font-weight: 300;
+            line-height: 1.7;
+            overflow-x: hidden
+        }
+
+        ::selection {
+            background: var(--gold);
+            color: #140f08
+        }
+
+        img {
+            display: block;
+            max-width: 100%
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: var(--serif);
+            font-weight: 500;
+            line-height: 1.2
+        }
+
+        .wrap {
+            width: min(1240px, 92%);
+            margin: 0 auto
+        }
+
+        .eyebrow {
+            font-size: .72rem;
+            letter-spacing: .42em;
+            text-transform: uppercase;
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            gap: 14px
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 44px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold))
+        }
+
+        .sec-title {
+            font-size: clamp(2rem, 4.2vw, 3.3rem);
+            margin: .55rem 0 1rem
+        }
+
+        .goldtxt {
+            background: linear-gradient(100deg, #8a6d1f 0%, var(--gold) 30%, #fff3c4 50%, var(--gold) 70%, #8a6d1f 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: sheen 6s linear infinite
+        }
+
+        @keyframes sheen {
+            to {
+                background-position: 200% center
+            }
+        }
+
+        section {
+            padding: 110px 0;
+            position: relative
+        }
+
+        .grain::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: .5;
+            background:
+                radial-gradient(700px 340px at 12% 8%, rgba(212, 175, 55, .07), transparent 60%),
+                radial-gradient(700px 340px at 88% 92%, rgba(212, 175, 55, .05), transparent 60%)
+        }
+
+        /* ---------- preloader ---------- */
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: var(--bg);
+            z-index: 999;
+            display: grid;
+            place-items: center;
+            transition: opacity .7s, visibility .7s
+        }
+
+        #loader.done {
+            opacity: 0;
+            visibility: hidden
+        }
+
+        .loader-mono {
+            width: 92px;
+            height: 92px;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-family: var(--serif);
+            font-size: 2.6rem;
+            color: var(--gold);
+            position: relative
+        }
+
+        .loader-mono::before {
+            content: "";
+            position: absolute;
+            inset: -9px;
+            border-radius: 50%;
+            border: 1px solid transparent;
+            border-top-color: var(--gold);
+            animation: spin 1.1s linear infinite
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        .loader-sub {
+            position: absolute;
+            bottom: 38%;
+            letter-spacing: .5em;
+            font-size: .65rem;
+            color: var(--mut);
+            text-transform: uppercase
+        }
+
+        /* ---------- topbar ---------- */
+        .topbar {
+            background: #0a0806;
+            border-bottom: 1px solid var(--line);
+            font-size: .72rem;
+            letter-spacing: .14em;
+            color: var(--mut);
+            padding: 9px 0
+        }
+
+        .topbar .wrap {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap
+        }
+
+        .topbar span b {
+            color: var(--gold);
+            font-weight: 500
+        }
+
+        /* ---------- nav ---------- */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 90;
+            background: rgba(15, 12, 9, .82);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--line)
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 0
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px
+        }
+
+        .logo .mark {
+            width: 44px;
+            height: 44px;
+            border: 1.5px solid var(--gold);
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-family: var(--serif);
+            font-size: 1.35rem;
+            color: var(--gold)
+        }
+
+        .logo .name {
+            font-family: var(--serif);
+            font-size: 1.28rem;
+            letter-spacing: .05em
+        }
+
+        .logo .name small {
+            display: block;
+            font-family: var(--sans);
+            font-size: .58rem;
+            letter-spacing: .5em;
+            color: var(--mut);
+            text-transform: uppercase
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 34px;
+            list-style: none
+        }
+
+        .navlinks a {
+            font-size: .74rem;
+            letter-spacing: .24em;
+            text-transform: uppercase;
+            color: var(--mut);
+            position: relative;
+            padding: 6px 0;
+            transition: color .3s
+        }
+
+        .navlinks a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width .35s
+        }
+
+        .navlinks a:hover {
+            color: var(--ink)
+        }
+
+        .navlinks a:hover::after {
+            width: 100%
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 18px
+        }
+
+        .bag {
+            position: relative;
+            background: none;
+            border: 1px solid var(--line);
+            color: var(--gold);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+            transition: .3s
+        }
+
+        .bag:hover {
+            border-color: var(--gold);
+            background: rgba(212, 175, 55, .08)
+        }
+
+        .bag .count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: var(--gold);
+            color: #14100a;
+            font-size: .62rem;
+            font-weight: 600;
+            min-width: 18px;
+            height: 18px;
+            border-radius: 9px;
+            display: grid;
+            place-items: center;
+            padding: 0 4px
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 30px;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            font-size: .74rem;
+            letter-spacing: .26em;
+            text-transform: uppercase;
+            cursor: pointer;
+            background: transparent;
+            position: relative;
+            overflow: hidden;
+            transition: color .35s;
+            font-family: var(--sans)
+        }
+
+        .btn::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(100deg, var(--gold-deep), var(--gold), var(--gold2));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .4s;
+            z-index: -1
+        }
+
+        .btn:hover {
+            color: #16110a
+        }
+
+        .btn:hover::before {
+            transform: scaleX(1)
+        }
+
+        .btn.solid {
+            background: linear-gradient(100deg, var(--gold-deep), var(--gold) 55%, var(--gold2));
+            color: #16110a;
+            border: none
+        }
+
+        .btn.solid:hover {
+            filter: brightness(1.1)
+        }
+
+        #burger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+            padding: 6px
+        }
+
+        #burger span {
+            width: 26px;
+            height: 1.5px;
+            background: var(--gold);
+            transition: .3s
+        }
+
+        #burger.open span:nth-child(1) {
+            transform: translateY(6.5px) rotate(45deg)
+        }
+
+        #burger.open span:nth-child(2) {
+            opacity: 0
+        }
+
+        #burger.open span:nth-child(3) {
+            transform: translateY(-6.5px) rotate(-45deg)
+        }
+
+        #mobileMenu {
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 8, 5, .97);
+            z-index: 85;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 26px;
+            transform: translateY(-100%);
+            transition: transform .5s cubic-bezier(.7, 0, .3, 1)
+        }
+
+        #mobileMenu.open {
+            transform: translateY(0)
+        }
+
+        #mobileMenu a {
+            font-family: var(--serif);
+            font-size: 1.7rem;
+            color: var(--ink)
+        }
+
+        #mobileMenu a:hover {
+            color: var(--gold)
+        }
+
+        /* ---------- hero ---------- */
+        .hero {
+            min-height: calc(100vh - 120px);
+            display: grid;
+            grid-template-columns: 1.05fr .95fr;
+            align-items: center;
+            gap: 60px;
+            padding: 70px 0 90px
+        }
+
+        .hero h1 {
+            font-size: clamp(2.7rem, 5.6vw, 4.7rem);
+            line-height: 1.08;
+            margin: 22px 0 24px
+        }
+
+        .hero p.lead {
+            color: var(--mut);
+            max-width: 480px;
+            font-size: 1.02rem;
+            margin-bottom: 36px
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap
+        }
+
+        .hero-visual {
+            position: relative;
+            justify-self: end
+        }
+
+        .arch {
+            width: min(430px, 100%);
+            aspect-ratio: 4/5.1;
+            border-radius: 230px 230px 18px 18px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            position: relative;
+            box-shadow: 0 40px 90px rgba(0, 0, 0, .55)
+        }
+
+        .arch img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.06);
+            animation: heroZoom 9s ease-in-out infinite alternate
+        }
+
+        @keyframes heroZoom {
+            to {
+                transform: scale(1.14)
+            }
+        }
+
+        .arch::after {
+            content: "";
+            position: absolute;
+            inset: 12px;
+            border: 1px solid rgba(212, 175, 55, .4);
+            border-radius: inherit;
+            pointer-events: none
+        }
+
+        .ring-deco {
+            position: absolute;
+            inset: -26px -26px auto auto;
+            width: 150px;
+            height: 150px;
+            border: 1px solid rgba(212, 175, 55, .35);
+            border-radius: 50%;
+            top: -30px;
+            right: -30px;
+            animation: spin 26s linear infinite
+        }
+
+        .ring-deco::before {
+            content: "";
+            position: absolute;
+            inset: 14px;
+            border: 1px dashed rgba(212, 175, 55, .3);
+            border-radius: 50%
+        }
+
+        .badge-card {
+            position: absolute;
+            background: rgba(20, 15, 10, .88);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--line);
+            padding: 13px 18px;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            border-radius: 12px;
+            box-shadow: 0 18px 40px rgba(0, 0, 0, .45);
+            animation: float 5s ease-in-out infinite
+        }
+
+        .badge-card .dot {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: rgba(212, 175, 55, .14);
+            display: grid;
+            place-items: center;
+            color: var(--gold);
+            flex: none
+        }
+
+        .badge-card b {
+            display: block;
+            font-size: .8rem;
+            font-weight: 500;
+            letter-spacing: .08em
+        }
+
+        .badge-card span {
+            font-size: .68rem;
+            color: var(--mut);
+            letter-spacing: .06em
+        }
+
+        .bc1 {
+            left: -52px;
+            bottom: 70px
+        }
+
+        .bc2 {
+            right: -30px;
+            bottom: -24px;
+            animation-delay: 2.2s
+        }
+
+        @keyframes float {
+            50% {
+                transform: translateY(-12px)
+            }
+        }
+
+        .scroll-hint {
+            position: absolute;
+            left: 50%;
+            bottom: 22px;
+            transform: translateX(-50%);
+            font-size: .62rem;
+            letter-spacing: .4em;
+            color: var(--mut);
+            text-transform: uppercase;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px
+        }
+
+        .scroll-hint::after {
+            content: "";
+            width: 1px;
+            height: 44px;
+            background: linear-gradient(var(--gold), transparent);
+            animation: drip 1.8s ease-in-out infinite
+        }
+
+        @keyframes drip {
+            0% {
+                transform: scaleY(0);
+                transform-origin: top
+            }
+
+            55% {
+                transform: scaleY(1);
+                transform-origin: top
+            }
+
+            56% {
+                transform-origin: bottom
+            }
+
+            100% {
+                transform: scaleY(0);
+                transform-origin: bottom
+            }
+        }
+
+        /* ---------- marquee ---------- */
+        .marquee {
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            background: #0b0906;
+            overflow: hidden;
+            padding: 16px 0
+        }
+
+        .marquee-track {
+            display: flex;
+            gap: 56px;
+            width: max-content;
+            animation: mq 26s linear infinite
+        }
+
+        .marquee-track span {
+            font-size: .72rem;
+            letter-spacing: .34em;
+            text-transform: uppercase;
+            color: var(--mut);
+            display: flex;
+            align-items: center;
+            gap: 56px;
+            white-space: nowrap
+        }
+
+        .marquee-track i {
+            color: var(--gold);
+            font-style: normal
+        }
+
+        @keyframes mq {
+            to {
+                transform: translateX(-50%)
+            }
+        }
+
+        /* ---------- categories ---------- */
+        .cats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+            margin-top: 54px
+        }
+
+        .cat {
+            position: relative;
+            height: 330px;
+            border-radius: 14px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 1px solid var(--line)
+        }
+
+        .cat img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .8s cubic-bezier(.2, .8, .2, 1);
+            filter: saturate(.92)
+        }
+
+        .cat:hover img {
+            transform: scale(1.09)
+        }
+
+        .cat .lbl {
+            position: absolute;
+            inset: auto 0 0 0;
+            padding: 22px;
+            background: linear-gradient(transparent, rgba(8, 6, 4, .92));
+            display: flex;
+            justify-content: space-between;
+            align-items: end
+        }
+
+        .cat .lbl h3 {
+            font-size: 1.25rem
+        }
+
+        .cat .lbl small {
+            color: var(--gold);
+            font-size: .66rem;
+            letter-spacing: .3em;
+            text-transform: uppercase
+        }
+
+        .cat .arrow {
+            width: 38px;
+            height: 38px;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: var(--gold);
+            transition: .35s
+        }
+
+        .cat:hover .arrow {
+            background: var(--gold);
+            color: #16110a;
+            transform: rotate(-45deg)
+        }
+
+        /* ---------- collections ---------- */
+        #collections {
+            background: var(--bg2)
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 38px 0 44px
+        }
+
+        .tab {
+            padding: 10px 22px;
+            border: 1px solid var(--line);
+            background: none;
+            color: var(--mut);
+            font-family: var(--sans);
+            font-size: .7rem;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 40px;
+            transition: .3s
+        }
+
+        .tab:hover {
+            color: var(--ink);
+            border-color: var(--gold)
+        }
+
+        .tab.on {
+            background: linear-gradient(100deg, var(--gold-deep), var(--gold));
+            color: #16110a;
+            border-color: transparent;
+            font-weight: 500
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px
+        }
+
+        .card {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            overflow: hidden;
+            transition: transform .45s, box-shadow .45s, border-color .45s;
+            display: flex;
+            flex-direction: column
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 175, 55, .5);
+            box-shadow: 0 26px 60px rgba(0, 0, 0, .5)
+        }
+
+        .card .ph {
+            aspect-ratio: 1/1.08;
+            overflow: hidden;
+            position: relative
+        }
+
+        .card .ph img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .7s
+        }
+
+        .card:hover .ph img {
+            transform: scale(1.1)
+        }
+
+        .tag {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: rgba(15, 11, 7, .85);
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            font-size: .58rem;
+            letter-spacing: .24em;
+            text-transform: uppercase;
+            padding: 6px 12px;
+            border-radius: 30px;
+            backdrop-filter: blur(4px)
+        }
+
+        .quick {
+            position: absolute;
+            left: 14px;
+            right: 14px;
+            bottom: 14px;
+            background: rgba(212, 175, 55, .95);
+            color: #171208;
+            border: none;
+            padding: 12px;
+            font-family: var(--sans);
+            font-size: .68rem;
+            letter-spacing: .24em;
+            text-transform: uppercase;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 10px;
+            opacity: 0;
+            transform: translateY(14px);
+            transition: .35s
+        }
+
+        .card:hover .quick {
+            opacity: 1;
+            transform: translateY(0)
+        }
+
+        .quick:hover {
+            background: var(--gold2)
+        }
+
+        .card .info {
+            padding: 18px 18px 20px
+        }
+
+        .card .info small {
+            color: var(--mut);
+            font-size: .62rem;
+            letter-spacing: .3em;
+            text-transform: uppercase
+        }
+
+        .card .info h3 {
+            font-size: 1.12rem;
+            margin: 5px 0 8px
+        }
+
+        .price {
+            display: flex;
+            align-items: baseline;
+            gap: 10px
+        }
+
+        .price b {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 1.02rem;
+            font-family: var(--serif)
+        }
+
+        .price s {
+            color: #6f6656;
+            font-size: .8rem
+        }
+
+        .grid .card.hide {
+            display: none
+        }
+
+        /* ---------- heritage ---------- */
+        .heritage {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center
+        }
+
+        .h-imgs {
+            position: relative;
+            padding-bottom: 56px
+        }
+
+        .h-imgs .main {
+            width: 82%;
+            border-radius: 14px;
+            border: 1px solid var(--line)
+        }
+
+        .h-imgs .floaty {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 52%;
+            border-radius: 14px;
+            border: 1px solid var(--gold);
+            box-shadow: 0 26px 60px rgba(0, 0, 0, .55)
+        }
+
+        .h-txt p {
+            color: var(--mut);
+            margin: 18px 0 30px
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1px;
+            background: var(--line);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 36px
+        }
+
+        .stat {
+            background: var(--bg2);
+            padding: 26px
+        }
+
+        .stat b {
+            font-family: var(--serif);
+            font-size: 2.2rem;
+            color: var(--gold);
+            display: block;
+            line-height: 1
+        }
+
+        .stat span {
+            font-size: .68rem;
+            letter-spacing: .26em;
+            text-transform: uppercase;
+            color: var(--mut)
+        }
+
+        /* ---------- bridal ---------- */
+        #bridal {
+            background: linear-gradient(180deg, var(--bg2), var(--bg))
+        }
+
+        .bridal-wrap {
+            display: grid;
+            grid-template-columns: .92fr 1.08fr;
+            gap: 70px;
+            align-items: center
+        }
+
+        .bridal-img {
+            position: relative
+        }
+
+        .bridal-img img {
+            border-radius: 14px;
+            border: 1px solid var(--line);
+            width: 100%
+        }
+
+        .bridal-img::before {
+            content: "";
+            position: absolute;
+            inset: -16px auto auto -16px;
+            width: 120px;
+            height: 120px;
+            border-top: 1px solid var(--gold);
+            border-left: 1px solid var(--gold);
+            border-radius: 14px 0 0 0
+        }
+
+        .bridal-img::after {
+            content: "";
+            position: absolute;
+            inset: auto -16px -16px auto;
+            width: 120px;
+            height: 120px;
+            border-bottom: 1px solid var(--gold);
+            border-right: 1px solid var(--gold);
+            border-radius: 0 0 14px 0
+        }
+
+        .checks {
+            list-style: none;
+            margin: 26px 0 36px;
+            display: grid;
+            gap: 14px
+        }
+
+        .checks li {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            color: var(--mut)
+        }
+
+        .checks svg {
+            flex: none;
+            margin-top: 4px
+        }
+
+        /* ---------- craft ---------- */
+        .craft-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 54px
+        }
+
+        .craft {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 38px 32px;
+            transition: .4s;
+            position: relative;
+            overflow: hidden
+        }
+
+        .craft::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold-deep), var(--gold), transparent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .5s
+        }
+
+        .craft:hover {
+            transform: translateY(-6px);
+            border-color: rgba(212, 175, 55, .4)
+        }
+
+        .craft:hover::before {
+            transform: scaleX(1)
+        }
+
+        .craft .ic {
+            width: 58px;
+            height: 58px;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: var(--gold);
+            margin-bottom: 24px
+        }
+
+        .craft h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px
+        }
+
+        .craft p {
+            color: var(--mut);
+            font-size: .94rem
+        }
+
+        /* ---------- testimonials ---------- */
+        #stories {
+            background: var(--bg2)
+        }
+
+        .tst-shell {
+            max-width: 820px;
+            margin: 50px auto 0;
+            position: relative;
+            min-height: 230px
+        }
+
+        .tst {
+            position: absolute;
+            inset: 0;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: .7s;
+            pointer-events: none
+        }
+
+        .tst.on {
+            opacity: 1;
+            transform: none;
+            pointer-events: auto
+        }
+
+        .tst q {
+            font-family: var(--serif);
+            font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+            font-style: italic;
+            line-height: 1.6;
+            quotes: "“" "”";
+            display: block
+        }
+
+        .tst .who {
+            margin-top: 26px
+        }
+
+        .tst .who b {
+            color: var(--gold);
+            font-weight: 500;
+            letter-spacing: .1em
+        }
+
+        .tst .who span {
+            display: block;
+            font-size: .72rem;
+            letter-spacing: .28em;
+            text-transform: uppercase;
+            color: var(--mut);
+            margin-top: 4px
+        }
+
+        .stars {
+            color: var(--gold);
+            letter-spacing: 6px;
+            margin-bottom: 20px;
+            font-size: .9rem
+        }
+
+        .dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 34px
+        }
+
+        .dots button {
+            width: 34px;
+            height: 3px;
+            border: none;
+            background: #3a3226;
+            cursor: pointer;
+            transition: .3s;
+            border-radius: 2px
+        }
+
+        .dots button.on {
+            background: var(--gold)
+        }
+
+        /* ---------- visit ---------- */
+        .visit {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: stretch
+        }
+
+        .visit .vimg {
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            min-height: 420px
+        }
+
+        .visit .vimg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
+
+        .vcard {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 46px
+        }
+
+        .vcard h3 {
+            font-size: 1.7rem;
+            margin-bottom: 26px
+        }
+
+        .vrow {
+            display: flex;
+            gap: 16px;
+            padding: 15px 0;
+            border-bottom: 1px dashed rgba(212, 175, 55, .2);
+            color: var(--mut);
+            font-size: .94rem
+        }
+
+        .vrow b {
+            color: var(--ink);
+            font-weight: 500;
+            min-width: 88px;
+            letter-spacing: .06em
+        }
+
+        form.msg {
+            margin-top: 30px;
+            display: grid;
+            gap: 14px
+        }
+
+        form.msg input,
+        form.msg textarea {
+            background: #120e0a;
+            border: 1px solid var(--line);
+            color: var(--ink);
+            padding: 13px 16px;
+            border-radius: 9px;
+            font-family: var(--sans);
+            font-size: .9rem;
+            outline: none;
+            transition: .3s;
+            resize: vertical
+        }
+
+        form.msg input:focus,
+        form.msg textarea:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, .12)
+        }
+
+        /* ---------- newsletter ---------- */
+        .news {
+            background: linear-gradient(100deg, #171106, #241a09 50%, #171106);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            text-align: center;
+            padding: 80px 0
+        }
+
+        .news h2 {
+            font-size: clamp(1.7rem, 3.4vw, 2.5rem)
+        }
+
+        .news p {
+            color: var(--mut);
+            margin: 12px 0 30px
+        }
+
+        .news form {
+            display: flex;
+            max-width: 520px;
+            margin: 0 auto;
+            border: 1px solid var(--gold);
+            border-radius: 60px;
+            overflow: hidden
+        }
+
+        .news input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            padding: 15px 24px;
+            color: var(--ink);
+            font-family: var(--sans);
+            outline: none;
+            font-size: .9rem
+        }
+
+        .news button {
+            background: linear-gradient(100deg, var(--gold-deep), var(--gold));
+            border: none;
+            color: #16110a;
+            font-family: var(--sans);
+            font-size: .7rem;
+            letter-spacing: .24em;
+            text-transform: uppercase;
+            font-weight: 600;
+            padding: 0 30px;
+            cursor: pointer
+        }
+
+        /* ---------- footer ---------- */
+        footer {
+            padding: 70px 0 0;
+            border-top: 1px solid var(--line)
+        }
+
+        .foot-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1fr;
+            gap: 44px;
+            padding-bottom: 54px
+        }
+
+        .foot-grid h4 {
+            font-size: .74rem;
+            letter-spacing: .32em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 20px;
+            font-family: var(--sans);
+            font-weight: 500
+        }
+
+        .foot-grid ul {
+            list-style: none;
+            display: grid;
+            gap: 11px
+        }
+
+        .foot-grid ul a {
+            color: var(--mut);
+            font-size: .9rem;
+            transition: .3s
+        }
+
+        .foot-grid ul a:hover {
+            color: var(--gold);
+            padding-left: 6px
+        }
+
+        .foot-about p {
+            color: var(--mut);
+            font-size: .9rem;
+            margin: 16px 0 22px;
+            max-width: 320px
+        }
+
+        .socials {
+            display: flex;
+            gap: 12px
+        }
+
+        .socials a {
+            width: 38px;
+            height: 38px;
+            border: 1px solid var(--line);
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: var(--mut);
+            transition: .3s
+        }
+
+        .socials a:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            transform: translateY(-3px)
+        }
+
+        .copy {
+            border-top: 1px solid var(--line);
+            padding: 22px 0;
+            display: flex;
+            justify-content: space-between;
+            gap: 14px;
+            flex-wrap: wrap;
+            font-size: .74rem;
+            color: #6f6656;
+            letter-spacing: .1em
+        }
+
+        /* ---------- misc ---------- */
+        #toast {
+            position: fixed;
+            bottom: 28px;
+            left: 50%;
+            transform: translate(-50%, 90px);
+            background: linear-gradient(100deg, var(--gold-deep), var(--gold));
+            color: #16110a;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-size: .78rem;
+            letter-spacing: .14em;
+            font-weight: 600;
+            z-index: 200;
+            transition: transform .45s cubic-bezier(.2, .9, .3, 1.3);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, .5)
+        }
+
+        #toast.show {
+            transform: translate(-50%, 0)
+        }
+
+        #toTop {
+            position: fixed;
+            right: 26px;
+            bottom: 26px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1px solid var(--gold);
+            background: rgba(15, 11, 7, .9);
+            color: var(--gold);
+            cursor: pointer;
+            z-index: 80;
+            opacity: 0;
+            visibility: hidden;
+            transition: .35s;
+            display: grid;
+            place-items: center
+        }
+
+        #toTop.show {
+            opacity: 1;
+            visibility: visible
+        }
+
+        #toTop:hover {
+            background: var(--gold);
+            color: #16110a
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(34px);
+            transition: opacity .8s, transform .8s cubic-bezier(.2, .8, .2, 1)
+        }
+
+        .reveal.in {
+            opacity: 1;
+            transform: none
+        }
+
+        /* ---------- responsive ---------- */
+        @media(max-width:1024px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr)
+            }
+
+            .cats {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 50px;
+                padding-top: 44px
+            }
+
+            .hero p.lead {
+                margin: 0 auto 36px
+            }
+
+            .hero .eyebrow {
+                justify-content: center
+            }
+
+            .hero .eyebrow::before {
+                display: none
+            }
+
+            .hero-btns {
+                justify-content: center
+            }
+
+            .hero-visual {
+                justify-self: center
+            }
+
+            .bc1 {
+                left: -14px
+            }
+
+            .heritage,
+            .bridal-wrap,
+            .visit {
+                grid-template-columns: 1fr;
+                gap: 44px
+            }
+
+            .foot-grid {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        @media(max-width:760px) {
+            section {
+                padding: 76px 0
+            }
+
+            .navlinks,
+            .nav-cta .btn {
+                display: none
+            }
+
+            #burger {
+                display: flex
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 14px
+            }
+
+            .cats {
+                grid-template-columns: 1fr;
+                height: auto
+            }
+
+            .cat {
+                height: 260px
+            }
+
+            .craft-grid {
+                grid-template-columns: 1fr
+            }
+
+            .stats {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .bc2 {
+                display: none
+            }
+
+            .foot-grid {
+                grid-template-columns: 1fr
+            }
+
+            .news form {
+                flex-direction: column;
+                border-radius: 16px;
+                gap: 0
+            }
+
+            .news button {
+                padding: 14px
+            }
+        }
+
+        @media(max-width:480px) {
+            .grid {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="loader">
+        <div class="loader-mono">M</div>
+        <div class="loader-sub">Mandal Jawellery</div>
+    </div>
+
+    <div class="topbar">
+        <div class="wrap">
+            <span><b>★</b> Trusted since 1998 — BIS Hallmarked 22K Gold</span>
+            <span>Mon–Sat 10:30–20:30 &nbsp;·&nbsp; <b>+91 98765 43210</b></span>
+        </div>
+    </div>
+
+    <header>
+        <div class="wrap">
+            <nav>
+                <a class="logo" href="#home">
+                    <span class="mark">M</span>
+                    <span class="name">Mandal Jawellery<small>Fine Gold &amp; Diamonds</small></span>
+                </a>
+                <ul class="navlinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#collections">Collections</a></li>
+                    <li><a href="#heritage">Heritage</a></li>
+                    <li><a href="#bridal">Bridal</a></li>
+                    <li><a href="#visit">Visit Us</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <button class="bag" id="bagBtn" aria-label="Enquiry bag">
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.6">
+                            <path d="M6 8h12l-1.2 12H7.2L6 8z" />
+                            <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+                        </svg>
+                        <span class="count" id="bagCount">0</span>
+                    </button>
+                    <a class="btn" href="#visit">Book Appointment</a>
+                    <button id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="mobileMenu">
+        <a href="#home">Home</a><a href="#collections">Collections</a><a href="#heritage">Heritage</a>
+        <a href="#bridal">Bridal</a><a href="#visit">Visit Us</a>
+    </div>
+
+    <!-- ================= HERO ================= -->
+    <section id="home" class="grain" style="padding-top:40px">
+        <div class="wrap">
+            <div class="hero">
+                <div>
+                    <div class="eyebrow reveal">House of Fine Jewellery · Est. 1998</div>
+                    <h1 class="reveal">Crafted in Gold.<br><span class="goldtxt">Worn as Legacy.</span></h1>
+                    <p class="lead reveal">For over two decades, Mandal Jawellery has adorned life's most precious
+                        moments — handcrafted 22K gold, certified diamonds and heirloom bridal masterpieces, made by
+                        artisans who treat every piece as art.</p>
+                    <div class="hero-btns reveal">
+                        <a class="btn solid" href="#collections">Explore Collections</a>
+                        <a class="btn" href="#bridal">Bridal Edit</a>
+                    </div>
+                </div>
+                <div class="hero-visual reveal">
+                    <div class="ring-deco"></div>
+                    <div class="arch"><img src="images/hero-model.jpg"
+                            alt="Bride wearing handcrafted Mandal gold jewellery"></div>
+                    <div class="badge-card bc1">
+                        <span class="dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.8">
+                                <path d="M12 2l2.5 6.5L21 9l-5 4.5L17.5 21 12 17l-5.5 4L8 13.5 3 9l6.5-.5z" />
+                            </svg></span>
+                        <div><b>BIS Hallmarked</b><span>100% certified purity</span></div>
+                    </div>
+                    <div class="badge-card bc2">
+                        <span class="dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.8">
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M12 7v5l3.5 2" />
+                            </svg></span>
+                        <div><b>Lifetime Exchange</b><span>Full-value buyback promise</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-hint">Scroll</div>
+    </section>
+
+    <!-- ================= MARQUEE ================= -->
+    <div class="marquee">
+        <div class="marquee-track" id="mq">
+            <span>BIS Hallmarked 22K Gold <i>✦</i> IGI &amp; GIA Certified Diamonds <i>✦</i> Lifetime Exchange <i>✦</i>
+                Handcrafted by Master Artisans <i>✦</i> Bridal Specialists <i>✦</i> Transparent Making Charges
+                <i>✦</i></span>
+        </div>
+    </div>
+
+    <!-- ================= CATEGORIES ================= -->
+    <section class="grain">
+        <div class="wrap">
+            <div class="eyebrow reveal">Shop by Category</div>
+            <h2 class="sec-title reveal">Every treasure, <span class="goldtxt">a masterpiece</span></h2>
+            <div class="cats">
+                <div class="cat reveal" data-goto="Necklaces"><img src="images/p-bridal-set.jpg" alt="Necklaces">
+                    <div class="lbl">
+                        <div><small>42 Designs</small>
+                            <h3>Necklaces</h3>
+                        </div><span class="arrow">→</span>
+                    </div>
+                </div>
+                <div class="cat reveal" data-goto="Earrings"><img src="images/p-jhumka.jpg" alt="Earrings">
+                    <div class="lbl">
+                        <div><small>68 Designs</small>
+                            <h3>Earrings</h3>
+                        </div><span class="arrow">→</span>
+                    </div>
+                </div>
+                <div class="cat reveal" data-goto="Rings"><img src="images/p-solitaire.jpg" alt="Rings">
+                    <div class="lbl">
+                        <div><small>55 Designs</small>
+                            <h3>Rings</h3>
+                        </div><span class="arrow">→</span>
+                    </div>
+                </div>
+                <div class="cat reveal" data-goto="Bangles"><img src="images/p-antique-kada.jpg" alt="Bangles">
+                    <div class="lbl">
+                        <div><small>37 Designs</small>
+                            <h3>Bangles &amp; Kadas</h3>
+                        </div><span class="arrow">→</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= COLLECTIONS ================= -->
+    <section id="collections" class="grain">
+        <div class="wrap">
+            <div class="eyebrow reveal">The Collection</div>
+            <h2 class="sec-title reveal">Signature pieces, <span class="goldtxt">handpicked for you</span></h2>
+            <div class="tabs reveal" id="tabs">
+                <button class="tab on" data-f="All">All</button>
+                <button class="tab" data-f="Necklaces">Necklaces</button>
+                <button class="tab" data-f="Earrings">Earrings</button>
+                <button class="tab" data-f="Rings">Rings</button>
+                <button class="tab" data-f="Bangles">Bangles</button>
+                <button class="tab" data-f="Bridal">Bridal</button>
+            </div>
+            <div class="grid" id="grid">
+
+                <div class="card reveal" data-cat="Bridal Necklaces">
+                    <div class="ph"><span class="tag">Bestseller</span><img src="images/p-bridal-set.jpg"
+                            alt="Rajwadi Bridal Set"><button class="quick" data-name="Rajwadi Bridal Set">Add to
+                            Enquiry</button></div>
+                    <div class="info"><small>Bridal · 22K Gold</small>
+                        <h3>Rajwadi Bridal Set</h3>
+                        <div class="price"><b>₹4,85,000</b><s>₹5,60,000</s></div>
+                    </div>
+                </div>
+
+                <div class="card reveal" data-cat="Rings">
+                    <div class="ph"><span class="tag">IGI Certified</span><img src="images/p-solitaire.jpg"
+                            alt="Eternal Solitaire Ring"><button class="quick" data-name="Eternal Solitaire Ring">Add to
+                            Enquiry</button></div>
+                    <div class="info"><small>Rings · 18K Diamond</small>
+                        <h3>Eternal Solitaire Ring</h3>
+                        <div class="price"><b>₹1,24,500</b></div>
+                    </div>
+                </div>
+
+                <div class="card reveal" data-cat="Earrings">
+                    <div class="ph"><span class="tag">New</span><img src="images/p-earrings-set.jpg"
+                            alt="Heritage Everyday Hoops"><button class="quick" data-name="Heritage Everyday Hoops">Add
+                            to Enquiry</button></div>
+                    <div class="info"><small>Earrings · 22K Gold</small>
+                        <h3>Heritage Everyday Hoops</h3>
+                        <div class="price"><b>₹42,800</b><s>₹49,500</s></div>
+                    </div>
+                </div>
+
+                <div class="card reveal" data-cat="Bangles">
+                    <div class="ph"><span class="tag">Antique</span><img src="images/p-antique-kada.jpg"
+                            alt="Nakshi Antique Kada"><button class="quick" data-name="Nakshi Antique Kada (Pair)">Add
+                            to Enquiry</button></div>
+                    <div class="info"><small>Bangles · 22K Antique</small>
+                        <h3>Nakshi Antique Kada</h3>
+                        <div class="price"><b>₹2,15,000</b></div>
+                    </div>
+                </div>
+
+                <div class="card reveal" data-cat="Rings">
+                    <div class="ph"><span class="tag">Statement</span><img src="images/p-emerald-ring.jpg"
+                            alt="Emerald Halo Ring"><button class="quick" data-name="Emerald Halo Ring">Add to
+                            Enquiry</button></div>
+                    <div class="info"><small>Rings · 18K Gold</small>
+                        <h3>Emerald Halo Ring</h3>
+                        <div class="price"><b>₹98,400</b></div>
+                    </div>
+                </div>
+
+                <div class="card reveal" data-cat="Necklaces">
+                    <div class="ph"><span class="tag">Classic</span><img src="images/p-mangalsutra.jpg"
+                            alt="Kalyan Mangalsutra"><button class="quick" data-name="Kalyan Mangalsutra">Add to
+                            Enquiry</button></div>
+                    <div class="info"><small>Necklaces · 22K Gold</small>
+                        <h3>Kalyan Mangalsutra</h3>
+                        <div class="price"><b>₹68,900</b><s>₹76,000</s></div>
+                    </div>
+                </div>
+
+                <div class="card reveal" data-cat="Necklaces">
+                    <div class="ph"><span class="tag">Gift Pick</span><img src="images/p-pendant.jpg"
+                            alt="Zircon Bloom Pendant"><button class="quick" data-name="Zircon Bloom Pendant">Add to
+                            Enquiry</button></div>
+                    <div class="info"><small>Necklaces · 18K Gold</small>
+                        <h3>Zircon Bloom Pendant</h3>
+                        <div class="price"><b>₹36,500</b></div>
+                    </div>
+                </div>
+
+                <div class="card reveal" data-cat="Earrings">
+                    <div class="ph"><span class="tag">Bestseller</span><img src="images/p-jhumka.jpg"
+                            alt="Temple Jhumkas"><button class="quick" data-name="Temple Jhumkas">Add to
+                            Enquiry</button></div>
+                    <div class="info"><small>Earrings · 22K Temple</small>
+                        <h3>Temple Jhumkas</h3>
+                        <div class="price"><b>₹54,200</b></div>
+                    </div>
+                </div>
+
+                <div class="card reveal" data-cat="Bangles">
+                    <div class="ph"><span class="tag">Festive</span><img src="images/p-ghungroo.jpg"
+                            alt="Kashmiri Ghungroo Bangles"><button class="quick"
+                            data-name="Kashmiri Ghungroo Bangles">Add to Enquiry</button></div>
+                    <div class="info"><small>Bangles · 22K Gold</small>
+                        <h3>Kashmiri Ghungroo Bangles</h3>
+                        <div class="price"><b>₹88,000</b><s>₹96,500</s></div>
+                    </div>
+                </div>
+
+                <div class="card reveal" data-cat="Rings">
+                    <div class="ph"><span class="tag">Wedding</span><img src="images/p-stack-rings.jpg"
+                            alt="Vows Stack Rings"><button class="quick" data-name="Vows Stack Rings">Add to
+                            Enquiry</button></div>
+                    <div class="info"><small>Rings · 18K Diamond</small>
+                        <h3>Vows Stack Rings</h3>
+                        <div class="price"><b>₹1,56,300</b></div>
+                    </div>
+                </div>
+
+                <div class="card reveal" data-cat="Bangles">
+                    <div class="ph"><span class="tag">Traditional</span><img src="images/p-meenakari.jpg"
+                            alt="Meenakari Bangles"><button class="quick" data-name="Meenakari Bangles">Add to
+                            Enquiry</button></div>
+                    <div class="info"><small>Bangles · 22K Gold</small>
+                        <h3>Meenakari Bangles</h3>
+                        <div class="price"><b>₹1,12,750</b></div>
+                    </div>
+                </div>
+
+                <div class="card reveal" data-cat="Necklaces Bridal">
+                    <div class="ph"><span class="tag">New</span><img src="images/p-chain-mangalsutra.jpg"
+                            alt="Halo Chain Mangalsutra"><button class="quick" data-name="Halo Chain Mangalsutra">Add to
+                            Enquiry</button></div>
+                    <div class="info"><small>Necklaces · 18K Gold</small>
+                        <h3>Halo Chain Mangalsutra</h3>
+                        <div class="price"><b>₹74,600</b></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= HERITAGE ================= -->
+    <section id="heritage" class="grain">
+        <div class="wrap heritage">
+            <div class="h-imgs reveal">
+                <img class="main" src="images/store-luxury.jpg" alt="Mandal Jawellery boutique interior">
+                <img class="floaty" src="images/store-counter.jpg" alt="Jewellery display at Mandal boutique">
+            </div>
+            <div class="h-txt">
+                <div class="eyebrow reveal">Our Heritage</div>
+                <h2 class="sec-title reveal">Three generations of <span class="goldtxt">golden trust</span></h2>
+                <p class="reveal">What began in 1998 as a single workshop with two goldsmiths is today one of the
+                    region's most loved jewellery houses. Every Mandal piece passes through 27 hands — from design
+                    sketch to final polish — and leaves our atelier only when it deserves to carry your family's name.
+                </p>
+                <p class="reveal">We melt only BIS-hallmarked gold, set only certified stones, and price with fully
+                    transparent making charges. No hidden margins. No compromise. Ever.</p>
+                <div class="stats reveal">
+                    <div class="stat"><b><span class="cnt" data-n="27">0</span>+</b><span>Years of Craft</span></div>
+                    <div class="stat"><b><span class="cnt" data-n="52000">0</span>+</b><span>Happy Patrons</span></div>
+                    <div class="stat"><b><span class="cnt" data-n="120">0</span>+</b><span>Master Artisans</span></div>
+                    <div class="stat"><b><span class="cnt" data-n="100">0</span>%</b><span>Hallmarked Gold</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= BRIDAL ================= -->
+    <section id="bridal" class="grain">
+        <div class="wrap bridal-wrap">
+            <div class="bridal-img reveal"><img src="images/bridal-model.jpg"
+                    alt="Bride in complete Mandal bridal jewellery"></div>
+            <div>
+                <div class="eyebrow reveal">The Bridal Atelier</div>
+                <h2 class="sec-title reveal">Your big day, dressed in <span class="goldtxt">gold</span></h2>
+                <p class="reveal" style="color:var(--mut)">From haldi to reception, our bridal stylists curate a
+                    complete trousseau around your outfit, skin tone and ceremony. Book a private consultation and let
+                    us compose your story in metal and stone.</p>
+                <ul class="checks reveal">
+                    <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>Complete polki, kundan, diamond &amp; gold trousseau curation</li>
+                    <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>Private lounge appointments with champagne service</li>
+                    <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>Custom design from sketch in 21 days</li>
+                    <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>Complimentary jewellery care for the first year</li>
+                </ul>
+                <a class="btn solid reveal" href="#visit">Book a Bridal Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CRAFT ================= -->
+    <section class="grain">
+        <div class="wrap" style="text-align:center">
+            <div class="eyebrow reveal" style="justify-content:center">The Mandal Promise</div>
+            <h2 class="sec-title reveal">Craftsmanship you can <span class="goldtxt">see &amp; feel</span></h2>
+            <div class="craft-grid" style="text-align:left">
+                <div class="craft reveal">
+                    <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                            <path d="M2 2l7.586 7.586" />
+                            <circle cx="11" cy="11" r="2" />
+                        </svg></div>
+                    <h3>Design-first</h3>
+                    <p>Every collection starts as a hand sketch in our studio, inspired by temple architecture, royal
+                        courts and modern minimalism.</p>
+                </div>
+                <div class="craft reveal">
+                    <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M6 3h12l4 6-10 12L2 9l4-6z" />
+                            <path d="M2 9h20M12 3l-4 6 4 12 4-12-4-6" />
+                        </svg></div>
+                    <h3>Handcrafted purity</h3>
+                    <p>Cast, engraved and set by 120+ karigars using time-honoured techniques — no mass production,
+                        ever.</p>
+                </div>
+                <div class="craft reveal">
+                    <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z" />
+                            <path d="M9 12l2 2 4-4" />
+                        </svg></div>
+                    <h3>Certified &amp; assured</h3>
+                    <p>BIS hallmark on every gram of gold, IGI/GIA certificates on every diamond, and a written lifetime
+                        exchange promise.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section id="stories" class="grain">
+        <div class="wrap" style="text-align:center">
+            <div class="eyebrow reveal" style="justify-content:center">Words of Our Patrons</div>
+            <h2 class="sec-title reveal">Stories set in <span class="goldtxt">gold</span></h2>
+            <div class="tst-shell reveal">
+                <div class="tst on">
+                    <div class="stars">★★★★★</div><q>The bridal set they crafted for my daughter's wedding left the
+                        entire baraat speechless. Three generations of my family have trusted only Mandal.</q>
+                    <div class="who"><b>Sunita Agrawal</b><span>Patron since 2003 · Kolkata</span></div>
+                </div>
+                <div class="tst">
+                    <div class="stars">★★★★★</div><q>Transparent pricing, certified stones and the patience to redesign
+                        my ring four times until it was perfect. Rare honesty in this trade.</q>
+                    <div class="who"><b>Rohan Mehta</b><span>Engagement Ring · Mumbai</span></div>
+                </div>
+                <div class="tst">
+                    <div class="stars">★★★★★</div><q>I walked in for one pair of jhumkas and left with a complete
+                        trousseau. The bridal lounge experience felt like a private royal viewing.</q>
+                    <div class="who"><b>Priya &amp; Aarav Sharma</b><span>Bridal Trousseau · Delhi</span></div>
+                </div>
+            </div>
+            <div class="dots" id="dots"></div>
+        </div>
+    </section>
+
+    <!-- ================= VISIT ================= -->
+    <section id="visit" class="grain">
+        <div class="wrap visit">
+            <div class="vimg reveal"><img src="images/store-counter.jpg" alt="Inside the Mandal Jawellery showroom">
+            </div>
+            <div class="vcard reveal">
+                <div class="eyebrow">Visit the Boutique</div>
+                <h3 style="margin-top:12px">Mandal Jawellery Flagship</h3>
+                <div class="vrow"><b>Address</b><span>14, Zaveri Bazaar Road, Mumbai 400003, Maharashtra</span></div>
+                <div class="vrow"><b>Hours</b><span>Mon–Sat · 10:30 AM – 8:30 PM<br>Sunday · By appointment</span></div>
+                <div class="vrow"><b>Phone</b><span>+91 98765 43210 · WhatsApp available</span></div>
+                <div class="vrow" style="border:none"><b>Email</b><span>care@mandaljawellery.in</span></div>
+                <form class="msg" id="msgForm">
+                    <input type="text" placeholder="Your name" required>
+                    <input type="tel" placeholder="Phone number" required>
+                    <textarea rows="3" placeholder="What are you looking for? (e.g. bridal consultation)"></textarea>
+                    <button class="btn solid" type="submit" style="justify-content:center">Request a Call Back</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= NEWSLETTER ================= -->
+    <div class="news grain">
+        <div class="wrap reveal">
+            <div class="eyebrow" style="justify-content:center">The Inner Circle</div>
+            <h2>Gold rates, new drops &amp; private previews</h2>
+            <p>Join 12,000+ patrons. No spam — only shine.</p>
+            <form id="newsForm"><input type="email" placeholder="Your email address" required><button
+                    type="submit">Subscribe</button></form>
+        </div>
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="wrap">
+            <div class="foot-grid">
+                <div class="foot-about">
+                    <a class="logo" href="#home"><span class="mark">M</span><span class="name">Mandal
+                            Jawellery<small>Fine Gold &amp; Diamonds</small></span></a>
+                    <p>Handcrafted 22K gold and certified diamond jewellery, made with 27 years of trust and zero
+                        compromise.</p>
+                    <div class="socials">
+                        <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.7">
+                                <rect x="3" y="3" width="18" height="18" rx="5" />
+                                <circle cx="12" cy="12" r="4" />
+                                <circle cx="17.2" cy="6.8" r=".8" fill="currentColor" />
+                            </svg></a>
+                        <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.7">
+                                <path
+                                    d="M15 3h-2.5A4.5 4.5 0 0 0 8 7.5V10H5v4h3v7h4v-7h3l1-4h-4V7.8c0-.5.4-.8.9-.8H15z" />
+                            </svg></a>
+                        <a href="#" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.7">
+                                <path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3z" />
+                                <path
+                                    d="M9 9.5c.5 2.5 3 5 5.5 5.5l1-1.5 2 1c-.5 1.5-1.5 2-3 1.5-3-1-6-4-7-7-.5-1.5 0-2.5 1.5-3l1 2z" />
+                            </svg></a>
+                        <a href="#" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.7">
+                                <rect x="2.5" y="6" width="19" height="12" rx="3" />
+                                <path d="M10 9.8v4.4l4-2.2z" fill="currentColor" stroke="none" />
+                            </svg></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#collections">Necklaces</a></li>
+                        <li><a href="#collections">Earrings</a></li>
+                        <li><a href="#collections">Rings</a></li>
+                        <li><a href="#collections">Bangles &amp; Kadas</a></li>
+                        <li><a href="#bridal">Bridal Edit</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>House</h4>
+                    <ul>
+                        <li><a href="#heritage">Our Heritage</a></li>
+                        <li><a href="#stories">Patron Stories</a></li>
+                        <li><a href="#visit">Book Appointment</a></li>
+                        <li><a href="#visit">Store Locator</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Care</h4>
+                    <ul>
+                        <li><a href="#">Lifetime Exchange</a></li>
+                        <li><a href="#">Jewellery Care Guide</a></li>
+                        <li><a href="#">Certification</a></li>
+                        <li><a href="#">EMI &amp; Payment Plans</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copy">
+                <span>© 2026 Mandal Jawellery · All rights reserved</span>
+                <span>BIS Licence CM/L-1998-0421 · Prices inclusive of GST</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast">Added to your enquiry bag ✦</div>
+    <button id="toTop" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg></button>
+
+    <script>
+        /* ---------- preloader ---------- */
+        window.addEventListener('load', () => setTimeout(() => document.getElementById('loader').classList.add('done'), 500));
+
+        /* ---------- mobile menu ---------- */
+        const burger = document.getElementById('burger'), mm = document.getElementById('mobileMenu');
+        burger.onclick = () => { burger.classList.toggle('open'); mm.classList.toggle('open') };
+        mm.querySelectorAll('a').forEach(a => a.onclick = () => { burger.classList.remove('open'); mm.classList.remove('open') });
+
+        /* ---------- marquee duplicate ---------- */
+        const mq = document.getElementById('mq'); mq.innerHTML += mq.innerHTML;
+
+        /* ---------- reveal on scroll ---------- */
+        const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target) } }), { threshold: .12 });
+        document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+        /* ---------- collection filter ---------- */
+        const tabs = document.querySelectorAll('.tab'), cards = document.querySelectorAll('#grid .card');
+        tabs.forEach(t => t.onclick = () => {
+            tabs.forEach(x => x.classList.remove('on')); t.classList.add('on');
+            const f = t.dataset.f;
+            cards.forEach(c => {
+                const show = f === 'All' || c.dataset.cat.split(' ').includes(f);
+                c.classList.toggle('hide', !show);
+                if (show) { c.style.animation = 'none'; c.offsetHeight; c.style.animation = 'fadeUp .5s ease both' }
+            });
+        });
+        document.querySelectorAll('.cat').forEach(ct => ct.onclick = () => {
+            const target = [...tabs].find(t => t.dataset.f === ct.dataset.goto);
+            if (target) target.click();
+            document.getElementById('collections').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        /* ---------- enquiry bag + toast ---------- */
+        let bag = 0;
+        const bagCount = document.getElementById('bagCount'), toast = document.getElementById('toast');
+        let toastT;
+        document.querySelectorAll('.quick').forEach(b => b.onclick = () => {
+            bag++; bagCount.textContent = bag;
+            toast.textContent = b.dataset.name + ' added to your enquiry bag ✦';
+            toast.classList.add('show'); clearTimeout(toastT);
+            toastT = setTimeout(() => toast.classList.remove('show'), 2600);
+        });
+        document.getElementById('bagBtn').onclick = () => {
+            toast.textContent = bag ? ('You have ' + bag + ' piece' + (bag > 1 ? 's' : '') + ' in your enquiry bag — we will call you shortly ✦') : 'Your enquiry bag is empty — explore the collection ✦';
+            toast.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(() => toast.classList.remove('show'), 2800);
+        };
+
+        /* ---------- counters ---------- */
+        const cio = new IntersectionObserver(es => es.forEach(e => {
+            if (!e.isIntersecting) return; cio.unobserve(e.target);
+            const el = e.target, n = +el.dataset.n, dur = 1600, t0 = performance.now();
+            (function tick(t) {
+                const p = Math.min((t - t0) / dur, 1), v = Math.round(n * (1 - Math.pow(1 - p, 3)));
+                el.textContent = v.toLocaleString('en-IN'); if (p < 1) requestAnimationFrame(tick)
+            })(t0);
+        }), { threshold: .6 });
+        document.querySelectorAll('.cnt').forEach(el => cio.observe(el));
+
+        /* ---------- testimonial slider ---------- */
+        const tsts = document.querySelectorAll('.tst'), dotsBox = document.getElementById('dots');
+        tsts.forEach((_, i) => { const d = document.createElement('button'); if (!i) d.classList.add('on'); d.onclick = () => goT(i); dotsBox.appendChild(d) });
+        let ti = 0, timer;
+        function goT(i) {
+            ti = i; tsts.forEach((t, k) => t.classList.toggle('on', k === i));
+            [...dotsBox.children].forEach((d, k) => d.classList.toggle('on', k === i));
+            clearInterval(timer); timer = setInterval(() => goT((ti + 1) % tsts.length), 5200)
+        }
+        timer = setInterval(() => goT((ti + 1) % tsts.length), 5200);
+
+        /* ---------- forms ---------- */
+        document.getElementById('msgForm').onsubmit = e => {
+            e.preventDefault(); e.target.reset();
+            toast.textContent = 'Thank you! Our stylist will call you within 2 hours ✦'; toast.classList.add('show');
+            clearTimeout(toastT); toastT = setTimeout(() => toast.classList.remove('show'), 3000)
+        };
+        document.getElementById('newsForm').onsubmit = e => {
+            e.preventDefault(); e.target.reset();
+            toast.textContent = 'Welcome to the Inner Circle ✦'; toast.classList.add('show');
+            clearTimeout(toastT); toastT = setTimeout(() => toast.classList.remove('show'), 2600)
+        };
+
+        /* ---------- back to top ---------- */
+        const toTop = document.getElementById('toTop');
+        window.addEventListener('scroll', () => toTop.classList.toggle('show', scrollY > 700));
+        toTop.onclick = () => scrollTo({ top: 0, behavior: 'smooth' });
+    </script>
+    <style>
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(18px)
+            }
+
+            to {
+                opacity: 1;
+                transform: none
+            }
+        }
+    </style>
+</body>
+
+</html>
